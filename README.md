@@ -5,5 +5,5 @@
 2. 民眾e管家API_訊息再利用_v1.4
 3. 資料提供者介接機制技術文件v1(奉核版)
 4. MyData合作機關實作期程計畫表
-5. 桃醫DP(未滿7歲子女疫苗注射記錄)API規範
+5. OAS規範參考文件
 6. tygh-children-care-apis.yaml
