@@ -141,7 +141,7 @@ paths:
           required: true
           schema:
             type: string
-            description: 'Bearer +accessToken'
+            description: Bearer +accessToken
       responses:
         '200':
           description: OK
@@ -156,28 +156,28 @@ paths:
                       description: '與id_token相同, 用來識別user身份'
                     account:
                       type: string
-                      description: 'egov帳號'
+                      description: egov帳號
                     uid:
                       type: string
-                      description: '身份證字號'
+                      description: 身份證字號
                     is_valid_uid:
                       type: string
-                      description: '身份證字號是否已驗證'
+                      description: 身份證字號是否已驗證
                     birthdate:
                       type: string
-                      description: '生日'
+                      description: 生日
                     gender:
                       type: string
-                      description: '性別'
+                      description: 性別
                     name:
                       type: string
-                      description: '姓名'
+                      description: 姓名
                     email:
                       type: string
-                      description: '電子郵件信箱'
+                      description: 電子郵件信箱
                     email_verified:
                       type: string
-                      description: '電子郵件信箱是否已驗證'
+                      description: 電子郵件信箱是否已驗證
         '401':
           description: Unauthorized
         '403':
@@ -192,7 +192,18 @@ paths:
           required: true
           schema:
             type: string
-            description: 'Bearer clientId:clientSecret 字串以Base64編碼'
+            description: 'Basic (clientId:clientSecret 字串以Base64編碼)'
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              items:
+                properties:
+                  token:
+                    description: access_token
+                    type: string
+            
       responses:
         '200':
           description: OK
@@ -207,12 +218,11 @@ paths:
                       description: '與id_token相同, 用來識別user身份'
                     scope:
                       type: string
-                      description: 'access_token授權範圍'
+                      description: access_token授權範圍
                     clientId:
                       type: string
-                      description: '登入的SP服務鍵值'
+                      description: 登入的SP服務鍵值
         '401':
           description: Unauthorized
         '403':
           description: Forbidden
-
