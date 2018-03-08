@@ -192,7 +192,7 @@ paths:
           required: true
           schema:
             type: string
-            description: 'Basic (clientId:clientSecret 字串以Base64編碼)'
+            description: 'Basic (resourceId:resourceSecret 字串以Base64編碼)'
       requestBody:
         content:
           application/x-www-form-urlencoded:
