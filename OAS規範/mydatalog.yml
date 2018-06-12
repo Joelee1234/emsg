@@ -1,0 +1,149 @@
+swagger: '2.0'
+info:
+  version: '1.0'
+  title: T1
+  description: 'TODO: Add Description'
+host: 117.56.91.143
+basePath: /mydatalog/v01
+securityDefinitions:
+  auth:
+    type: basic
+    x-testValue: []
+    x-skip-client-authentication: false
+schemes:
+  - http
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  /log:
+    get:
+      description: ''
+      summary: 'http://117.56.91.143/mydatalog/v01/log'
+      operationId: LogGet
+      produces:
+        - application/json
+      parameters: []
+      responses:
+        '200':
+          description: ''
+      security:
+        - auth: []
+      x-unitTests:
+        - request:
+            method: GET
+            uri: /log
+          expectedResponse:
+            x-allowExtraHeaders: true
+            x-bodyMatchMode: NONE
+            x-arrayOrderedMatching: false
+            x-arrayCheckCount: false
+            x-matchResponseSchema: true
+            headers: {}
+          x-testShouldPass: true
+          x-testEnabled: true
+          x-testName: 'http://117.56.91.143/mydatalog/v01/log'
+          x-testDescription: ''
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+    post:
+      description: ''
+      summary: 'http://117.56.91.143/mydatalog/v01/log'
+      operationId: LogPost
+      produces:
+        - application/json
+      parameters:
+        - name: Body
+          in: body
+          required: true
+          description: ''
+          schema:
+            $ref: '#/definitions/Http:~1~1117.56.91.143~1mydatalog~1v01~1logrequest'
+        - name: Content-Type
+          in: header
+          required: true
+          type: string
+          description: ''
+      responses:
+        '200':
+          description: ''
+      security:
+        - auth: []
+      x-unitTests:
+        - request:
+            method: POST
+            uri: /log
+            headers:
+              Content-Type: application/json
+            body: >-
+              {"providerKey":"wederlin","userName":"林維德","uid":"H120983053","clientId":"login.cp.gov.tw","auditEvent":"1","scope":"openid
+              gsp.profile ARES000001-read offline_access","ip":"211.72.73.40"}
+          expectedResponse:
+            x-allowExtraHeaders: true
+            x-bodyMatchMode: NONE
+            x-arrayOrderedMatching: false
+            x-arrayCheckCount: false
+            x-matchResponseSchema: true
+            headers: {}
+          x-testShouldPass: true
+          x-testEnabled: true
+          x-testName: 'http://117.56.91.143/mydatalog/v01/log1'
+          x-testDescription: ''
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+definitions:
+  'Http://117.56.91.143/mydatalog/v01/logrequest':
+    title: 'http://117.56.91.143/mydatalog/v01/logRequest'
+    example:
+      providerKey: wederlin
+      userName: 林維德
+      uid: H120983053
+      clientId: login.cp.gov.tw
+      auditEvent: '1'
+      scope: openid gsp.profile ARES000001-read offline_access
+      ip: 211.72.73.40
+    type: object
+    properties:
+      providerKey:
+        description: ''
+        example: wederlin
+        type: string
+      userName:
+        description: ''
+        example: 林維德
+        type: string
+      uid:
+        description: ''
+        example: H120983053
+        type: string
+      clientId:
+        description: ''
+        example: login.cp.gov.tw
+        type: string
+      auditEvent:
+        description: ''
+        example: '1'
+        type: string
+      scope:
+        description: ''
+        example: openid gsp.profile ARES000001-read offline_access
+        type: string
+      ip:
+        description: ''
+        example: 211.72.73.40
+        type: string
+    required:
+      - providerKey
+      - userName
+      - uid
+      - clientId
+      - auditEvent
+      - scope
+      - ip
