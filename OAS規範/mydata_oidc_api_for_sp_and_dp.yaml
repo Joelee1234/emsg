@@ -153,14 +153,14 @@ paths:
                   properties:
                     sub:
                       type: string
-                      description: '與id_token相同, 用來識別user身份'
+                      description: '與id_token相同, 用來識別user身份, AS使用者鍵值'
                     account:
                       type: string
                       description: egov帳號
                     uid:
                       type: string
                       description: 身份證字號
-                    is_valid_uid:
+                    uid_verified:
                       type: string
                       description: 身份證字號是否已驗證
                     birthdate:
@@ -169,15 +169,12 @@ paths:
                     gender:
                       type: string
                       description: 性別
-                    name:
+                    cn:
                       type: string
                       description: 姓名
                     email:
                       type: string
                       description: 電子郵件信箱
-                    email_verified:
-                      type: string
-                      description: 電子郵件信箱是否已驗證
         '401':
           description: Unauthorized
         '403':
