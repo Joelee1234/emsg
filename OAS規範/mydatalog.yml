@@ -3,7 +3,7 @@ info:
   version: '1.0'
   title: T1
   description: 'TODO: Add Description'
-host: 117.56.91.143
+host: mydata.nat.gov.tw
 basePath: /mydatalog/v01
 securityDefinitions:
   auth:
@@ -20,11 +20,17 @@ paths:
   /log:
     get:
       description: ''
-      summary: 'http://117.56.91.143/mydatalog/v01/log'
+      summary: 'https://mydata.nat.gov.tw/mydatalog/v01/log'
       operationId: LogGet
       produces:
         - application/json
-      parameters: []
+      parameters:
+        - name: Authorization
+          in: header
+          required: true
+          schema:
+            type: string
+            description: 'Basic (resourceId:resourceSecret 字串以Base64編碼)'
       responses:
         '200':
           description: ''
@@ -43,7 +49,7 @@ paths:
             headers: {}
           x-testShouldPass: true
           x-testEnabled: true
-          x-testName: 'http://117.56.91.143/mydatalog/v01/log'
+          x-testName: 'https://mydata.nat.gov.tw/mydatalog/v01/log'
           x-testDescription: ''
       x-operation-settings:
         CollectParameters: false
@@ -52,7 +58,7 @@ paths:
         IsMultiContentStreaming: false
     post:
       description: ''
-      summary: 'http://117.56.91.143/mydatalog/v01/log'
+      summary: 'https://mydata.nat.gov.tw/mydatalog/v01/log'
       operationId: LogPost
       produces:
         - application/json
@@ -62,7 +68,7 @@ paths:
           required: true
           description: ''
           schema:
-            $ref: '#/definitions/Http:~1~1117.56.91.143~1mydatalog~1v01~1logrequest'
+            $ref: '#/definitions/Http:~1~1mydata.nat.gov.tw~1mydatalog~1v01~1logrequest'
         - name: Content-Type
           in: header
           required: true
@@ -80,7 +86,7 @@ paths:
             headers:
               Content-Type: application/json
             body: >-
-              {"providerKey":"wederlin","userName":"林維德","uid":"H120983053","clientId":"login.cp.gov.tw","auditEvent":"1","scope":"openid
+              {"providerKey":"WEDERLIN","userName":"林維德","uid":"H120983053","clientId":"CLI.mydata.portal","auditEvent":"1","scope":"openid
               gsp.profile ARES000001-read offline_access","ip":"211.72.73.40"}
           expectedResponse:
             x-allowExtraHeaders: true
@@ -91,7 +97,7 @@ paths:
             headers: {}
           x-testShouldPass: true
           x-testEnabled: true
-          x-testName: 'http://117.56.91.143/mydatalog/v01/log1'
+          x-testName: 'https://mydata.nat.gov.tw/mydatalog/v01/log1'
           x-testDescription: ''
       x-operation-settings:
         CollectParameters: false
@@ -99,8 +105,8 @@ paths:
         AllowDynamicFormParameters: false
         IsMultiContentStreaming: false
 definitions:
-  'Http://117.56.91.143/mydatalog/v01/logrequest':
-    title: 'http://117.56.91.143/mydatalog/v01/logRequest'
+  'https://mydata.nat.gov.tw/mydatalog/v01/logrequest':
+    title: 'https://mydata.nat.gov.tw/mydatalog/v01/logRequest'
     example:
       providerKey: wederlin
       userName: 林維德
