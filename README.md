@@ -2,7 +2,7 @@
 目前MyData 數位服務個人化文件尚在更新中，預計5/24號前會將技術文件及範例程式陸續更新上傳
 
 開源協作相關文件：
-1.OAS規範   
+1.OAS規範
    3.1 OAS規範參考文件   
    3.2 mydata_oidc_api_for_sp_and_dp.yaml   
    3.3 tygh-children-care-apis.yaml
