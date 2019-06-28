@@ -6,8 +6,8 @@
 1. MyData應用規範與技術文件
   1.1 2_資料提供者技術文件v1.6.pdf
   1.2 3_服務提供者技術文件v1.4.pdf
-  1.3 MyData整合協作流程_v7.jpg
-  1.4 資料檔解析規則說明文件-example-v1.json
+  1.3 MyData介接資料檔案規格書(範例).odt
+  1.4 MyData整合協作流程_v7.jpg
   1.5 資料檔解析規則說明文件v1.docx
 
 2. MyData範例程式
