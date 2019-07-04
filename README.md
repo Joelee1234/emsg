@@ -8,7 +8,9 @@
   1.2 3_服務提供者技術文件v1.5.pdf
   1.3 MyData介接資料檔案規格書(範例).odt
   1.4 MyData整合協作流程_v9.jpg
-  1.5 資料檔解析規則說明文件v1.docx
+  1.5 MyData服務提供者測試流程說明.pdf
+  1.6
+  1.7 資料檔解析規則說明文件v1.docx
 
 2. MyData範例程式
   2.1 dp-example.1.0.zip
