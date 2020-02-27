@@ -45,7 +45,7 @@
   
 4. MyData範例程式
   4.1 dp-example.1.0.zip
-  4.2 sp-example.1.0.zip
+  4.2 sp-example.2.1.zip
 
 5. e管家相關技術文件   
   5.1 民眾e管家API_訊息再利用_v1.4
